@@ -33,42 +33,11 @@ class Footer extends HTMLElement {
 
 customElements.define("foot-er", Footer)
 
-function setAtr(name, value) {
-  document.documentElement.style.setProperty(name, value);
-}
-
-function darkMode() {
-  setAtr('--bg', '#212121');
-  setAtr('--prim-text', '#EEEEEE');
-  
-  const icon1 = document.getElementById('icon1')
-  const icon2 = document.getElementById('icon2')
-  if (icon1) icon1.style.display = 'none';
-  if (icon2) icon2.style.display = 'inline-block';
-  
-  localStorage.setItem('theme', 'dark');
-}
-
-function lightMode() {
-  setAtr('--bg', '#CCCCCC');
-  setAtr('--prim-text', '#000000');
-  
-  const icon1 = document.getElementById('icon1')
-  const icon2 = document.getElementById('icon2')
-  if (icon1) icon1.style.display = 'inline-block';
-  if (icon2) icon2.style.display = 'none';
-  
-  localStorage.setItem('theme', 'light');
-}
-
-// save theme between pages
-if (localStorage.getItem('theme') === 'light') lightMode();
-else darkMode();
 
 // randomized text in homepage
 const hometext = document.querySelector(".hometext")
 if (hometext) {
-  const msgs = ["you probably saw me on twitter", "you opened the wrong webpage", "this is NOT a portfolio", "'claude code fix my css bug please'", "sudo pacman -Sybau"];
+  const msgs = ["you probably saw me on twitter", "you opened the wrong webpage", "this is NOT a portfolio", "'claude code fix my css bug please'", "sudo pacman -Sybau", "no problem here"];
   hometext.textContent = msgs[Math.floor(Math.random() * msgs.length)];
 }
 

@@ -13,8 +13,8 @@
     
     <article>
     <div>
-      <img src="assets/favicon.png" id="icon1">
-      <img src="assets/favicon2.png" id="icon2">
+      <img src="assets/favicon.png" id="light">
+      <img src="assets/favicon2.png" id="dark">
       <h2>&nbsp;bluezcreen</h2>
     </div>
     
@@ -44,8 +44,25 @@
     
     <div>
     i'm known online under the username 'bluezcreen'. it's literally in the domain name<br><br>
-    chronically online, tech enthusiast, thingamajig and whatchamacallit living in Indonesia<!--<br>currently surviving off dimes because of inflation-->
+    chronically online tech enthusiast living in Indonesia<!--<br>currently surviving off dimes because of inflation-->
     </div>
+    </article>
+
+    <hr>
+
+    <article id="bio">
+      <div>
+      <b>software:</b> <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;acode (scripting)<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;termux (git, for github)<br><br>
+     </div>
+        
+      <div>
+      <b>programming languages:</b><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;HTML, CSS<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;JavaScript (not yet)<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;Python (a bit)
+     </div>
     </article>
   </div>
   
@@ -61,13 +78,6 @@
     <a href="/socials/">socials</a>&nbsp;&nbsp;&nbsp;
     <a href="/guestbook/">guestbook</a>&nbsp;&nbsp;&nbsp;
     <a href="/archive/">archive</a>&nbsp;&nbsp;&nbsp;
-    <hr>
-      
-    <div style="opacity: 50%;">
-    <a onclick="darkMode()">dark</a>&nbsp;&nbsp;&nbsp;
-    <a onclick="lightMode()">light</a>&nbsp;&nbsp;&nbsp;
-    <s><a>themer (TBA)</a></s>
-    </div>
   </article>
   
   <div class="haiku">
@@ -84,7 +94,21 @@
                 ||     ||
     </pre>
     <foot-er></foot-er>
+
+    <hr><br>
+    
+    <div class="toggles">
+      <a onclick="toggleTheme()">
+        <i id="toggle-moon" class="fa-solid fa-moon"></i>
+        <i id="toggle-sun" class="fa-solid fa-sun" style="display:none"></i>
+      </a>&nbsp;&nbsp;&nbsp;
+      
+      <a onclick="toggleFont()">
+        <i class="fa-solid fa-font"></i>
+      </a>&nbsp;&nbsp;&nbsp;
+    </div>
   </div>
   
   <script src="elements.js" defer></script>
+  <script src="themer.js" defer></script>
 </body>
