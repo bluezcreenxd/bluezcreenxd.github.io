@@ -8,7 +8,7 @@ if (!localStorage.getItem('theme')) {
 }
 
 if (!localStorage.getItem('font')) {
-  localStorage.setItem('theme', 'pixel');
+  localStorage.setItem('font', 'pixel');
 }
 
 function toggleTheme() {
