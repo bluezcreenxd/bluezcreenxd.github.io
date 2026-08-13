@@ -2,6 +2,12 @@
 
 <head>
  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <script>
+  (function () {
+    var theme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.className = theme === 'dark' ? 'theme-dark' : 'theme-light';
+  })();
+</script>
   <link id="theme" rel="stylesheet" href="/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>bluezcreen.site</title>
@@ -24,10 +30,9 @@
     -->
     
     <ul>
-      <li><a href="https://bluezcreen.neocities.com">mk. iv (A)(scrapped, now @ neocities!)</a></li>
-      <li><a>mk. iv (B) (current)</a></li>
+      <li><a>mk. iv (current)</a></li>
+      <li><a href="https://bluezcreen.neocities.org">mk. iii</a></li>
       <s>
-      <li><a>mk. iii</a></li>
       <li><a>mk. ii</a></li>
       <li><a>mk. i</a></li></s>
       <li><h2>microslop locked me out of my github account because of a fucking 2fa so... tba</h2></li>

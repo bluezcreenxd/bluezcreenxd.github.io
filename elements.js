@@ -37,7 +37,7 @@ customElements.define("foot-er", Footer)
 // randomized text in homepage
 const hometext = document.querySelector(".hometext")
 if (hometext) {
-  const msgs = ["you probably saw me on twitter", "you opened the wrong webpage", "this is NOT a portfolio", "'claude code fix my css bug please'", "sudo pacman -Sybau", "no problem here"];
+  const msgs = ["you probably saw me on twitter", "you opened the wrong webpage", "this is NOT a portfolio", "'claude code fix my css bug please'", "sudo pacman -Sybau", "no problem here", "say 'fuzzy pickles!''"];
   hometext.textContent = msgs[Math.floor(Math.random() * msgs.length)];
 }
 

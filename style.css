@@ -1,13 +1,19 @@
-:root {
+.theme-dark {
   --bg: #212121;
-  --accent: #989898;
+  --accent: #666666;
   --prim-text: #EEEEEE;
-  --seco-text: #FFFFFF;
-  
+}
+
+.theme-light {
+  --bg: #CCCCCC;
+  --accent: #555555;
+  --prim-text: #000000;
+}
+
+:root {
   --title-font: "mondwest";
   --body-font: "neuebit";
 }
-
 @font-face {
   font-family: "mondwest";
   src: url("assets/mondwest.otf")
@@ -29,7 +35,7 @@
 }
 
 @media screen and (min-width: 700px) {
-  body { max-width: 500px; }
+  body { max-width: 480px; font-size: 18px; }
   
   .desktop { display: block; }
   .mobile { display: none; }
@@ -40,18 +46,18 @@
 }
 
 body {
-  padding: 20px;
+  padding: 16px;
   font-family: var(--body-font);
-  font-size: 0.8rem;
+  font-size: 12px;
   color: var(--prim-text);
   background-color: var(--bg);
   transition: opacity 0.3s ease;
 }
 
 h1, h2, h3 { font-family: var(--title-font); font-weight: normal; display: inline; }
-h1 { font-size: 3rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.5rem; font-family: var(--body-font) !important;}
+h1 { font-size: 2.7rem; }
+h2 { font-size: 1.9rem; }
+h3 { font-size: 1.2rem; font-family: var(--body-font) !important;}
 
 hr { 
   background-color: var(--accent);
@@ -89,13 +95,6 @@ button {
 .header {
   padding: 50px 0 0 0;
   text-align: left;
-  margin-bottom: 40px;
-}
-
-.header.homepage {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
   margin-bottom: 20px;
 }
 
@@ -118,15 +117,8 @@ button {
   margin: 0 auto
 }
 
-.toggles {
-  opacity: 50%;
-  gap: 16px;
-  text-align: center;
-  font-size: 20px;
-}
-
 .box {
-  padding: 24px;
+  padding: 16px;
   border-top: 1px solid var(--accent);
   border-bottom: 1px solid var(--accent);
   font-family: var(--body-font);
@@ -153,13 +145,15 @@ button {
   text-align: right;
 }
 
-n-av a { text-decoration: underline; }
+.hlight > * {
+  color: var(--bg);
+  background-color: var(--prim-text);
+  outline: 2px solid var(--prim-text);
+}
 
 /*see lightMode() and darkMode()*/
-#light { height: 24px; display: none; }
-#dark { height: 24px; display: inline-block; }
-#toggle-sun { height: 24px; display: none; }
-#toggle-moon { height: 24px; display: inline-block; }
+#light { height: 20px; display: none; }
+#dark { height: 20px; display: inline-block; }
 
 #tw { display: inline-block; }
 #twtext {

@@ -2,6 +2,12 @@
 
 <head>
  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <script>
+  (function () {
+    var theme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.className = theme === 'dark' ? 'theme-dark' : 'theme-light';
+  })();
+  </script>
   <link id="theme" rel="stylesheet" href="style.css?v=2">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,42 +15,51 @@
 </head>
 
 <body>
-  <nav class="header homepage">
+  <nav class="header">
     
     <article>
-    <div>
-      <img src="assets/favicon.png" id="light">
-      <img src="assets/favicon2.png" id="dark">
-      <h2>&nbsp;bluezcreen</h2>
-    </div>
-    
-    <nav style="font-size: 1.4rem;">
-      <div id="tw">
-        <p id="twtext" class="hometext">you probably saw me on twitter</p>
+      <div>
+        <img src="assets/favicon.png" id="light">
+        <img src="assets/favicon2.png" id="dark">
+        <h2>&nbsp;bluezcreen</h2>
       </div>
-    </nav>
+      
+      <nav style="font-size: 20px;">
+        <div id="tw">
+          <p id="twtext" class="hometext">you probably saw me on twitter</p>
+        </div>
+      </nav>
     </article>
-    
-    <div style="font-size: 1.2rem">
-      <a href="https://x.com/bluezcreen"><i class="fa-brands fa-twitter"></i></a>&nbsp;
+
+    <!--<div style="font-size: 18px">
+      <a href="https://x.com/bluezcreen_"><i class="fa-brands fa-twitter"></i></a>&nbsp;
       <a href="https://m.youtube.com/channel/UCLZkiAjM041QTJiqf9Q_Vmw"><i class="fa-brands fa-youtube"></i></a>&nbsp;
       <a href="https://discord.com/users/764432072261107763"><i class="fa-brands fa-discord"></i></a>&nbsp;
-      <a href="https://github.com/bluezcreen"><i class="fa-brands fa-github"></i></a>
-    </div>
+      <a href="https://github.com/bluezcreenxd"><i class="fa-brands fa-github"></i></a>
+    </div>-->
+    
   </nav>
+
+  <article class="box">
+    <a href="/">homepage</a>&nbsp;&nbsp;&nbsp;
+    <a href="/socials/">socials</a>&nbsp;&nbsp;&nbsp;
+    <a href="/guestbook/">guestbook</a>&nbsp;&nbsp;&nbsp;
+    <a href="/archive/">archive</a>&nbsp;&nbsp;&nbsp;
+  </article>
   
   <div class="box">
     <article>
     <div id="bio">
-    <img src="assets/profile.webp" style="width: 85px; flex-shrink: 0">
-    <div>he/him, 16, @SE Asia, INFP<br>highschooler interested in webdev & tech</div>
+    <img src="assets/profile2.jpg" style="width: 85px; flex-shrink: 0">
+    <div><br><br>he/him, 16, @SE Asia, INFP<br>interested in webdev & tech</div>
     </div>
     
     <hr>
     
     <div>
-    i'm known online under the username 'bluezcreen'. it's literally in the domain name<br><br>
-    chronically online tech enthusiast living in Indonesia<!--<br>currently surviving off dimes because of inflation-->
+      i'm known online under the username 'bluezcreen'. it's literally in the domain name<br><br>
+      chronically online tech enthusiast living in Indonesia<!--<br>currently surviving off dimes because of inflation--><br><br>
+      sorry for the barebones site i'm trying to think about what else i should add
     </div>
     </article>
 
@@ -58,13 +73,18 @@
      </div>
         
       <div>
-      <b>programming languages:</b><br>
+      <b>i do:</b><br>
       &nbsp;&nbsp;&nbsp;&nbsp;HTML, CSS<br>
       &nbsp;&nbsp;&nbsp;&nbsp;JavaScript (not yet)<br>
       &nbsp;&nbsp;&nbsp;&nbsp;Python (a bit)
      </div>
     </article>
   </div>
+
+  <div class="box" style="font-size: 20px">
+      <a onclick="darkMode()"><i class="fa-solid fa-moon"></i></a>&nbsp;&nbsp;
+      <a onclick="lightMode()"><i class="fa-solid fa-sun"></i></a>
+    </div>
   
   <!--<text-box title="cat checklist.txt">
     [ ] actually add other pages<br>
@@ -73,12 +93,7 @@
     [ ] idea: a page that runs stupid scripts i made while learning python
   </text-box>-->
   
-  <article class="box">
-    <a href="/">homepage</a>&nbsp;&nbsp;&nbsp;
-    <a href="/socials/">socials</a>&nbsp;&nbsp;&nbsp;
-    <a href="/guestbook/">guestbook</a>&nbsp;&nbsp;&nbsp;
-    <a href="/archive/">archive</a>&nbsp;&nbsp;&nbsp;
-  </article>
+  
   
   <div class="haiku">
     <pre>
@@ -95,20 +110,6 @@
     </pre>
     <foot-er></foot-er>
 
-    <hr><br>
-    
-    <div class="toggles">
-      <a onclick="toggleTheme()">
-        <i id="toggle-moon" class="fa-solid fa-moon"></i>
-        <i id="toggle-sun" class="fa-solid fa-sun" style="display:none"></i>
-      </a>&nbsp;&nbsp;&nbsp;
-      
-      <a onclick="toggleFont()">
-        <i class="fa-solid fa-font"></i>
-      </a>&nbsp;&nbsp;&nbsp;
-    </div>
-  </div>
-  
   <script src="elements.js" defer></script>
   <script src="themer.js" defer></script>
 </body>
