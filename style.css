@@ -34,11 +34,38 @@
   src: url("assets/DOS.ttf")
 }
 
+.grid {
+  display: block;
+}
+
+
 @media screen and (min-width: 700px) {
-  body { max-width: 480px; font-size: 18px; }
-  
+  body { 
+    max-width: 900px; 
+    font-size: 18px;
+    margin: 0 auto;
+    }
+
   .desktop { display: block; }
   .mobile { display: none; }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    border-bottom: 1px solid var(--prim-text);
+
+    margin-top: 30px;
+    padding: 5px;
+  }
+
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 16px;
+  }
 }
 
 *, *::before, *::after {
@@ -57,7 +84,8 @@ body {
 h1, h2, h3 { font-family: var(--title-font); font-weight: normal; display: inline; }
 h1 { font-size: 2.7rem; }
 h2 { font-size: 1.9rem; }
-h3 { font-size: 1.2rem; font-family: var(--body-font) !important;}
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.2rem; font-family: var(--body-font) !important;}
 
 hr { 
   background-color: var(--accent);
@@ -91,20 +119,23 @@ button {
   justify-content: center;
 }
 
-
-.header {
-  padding: 50px 0 0 0;
-  text-align: left;
-  margin-bottom: 20px;
-}
-
 .footer { /*foot🤤🤤🤤*/
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   align-items: center;
   bottom: 0;
-  padding: 10px;
+  padding: 40px 0 40px 0;
+
+  margin-top: 150px;
+}
+
+.banner {
+  height: 150px;
+  background: url("assets/banner.jpg") center 40% / cover no-repeat;
+  margin: 8px 0;
+  border: 1px solid var(--prim-text);
+  box-sizing: border-box;
 }
 
 .haiku {
@@ -123,6 +154,8 @@ button {
   border-bottom: 1px solid var(--accent);
   font-family: var(--body-font);
   font-size: 1.4rem !important;
+
+  
 }
 
 .title {
@@ -145,10 +178,30 @@ button {
   text-align: right;
 }
 
-.hlight > * {
+.hlight {
   color: var(--bg);
   background-color: var(--prim-text);
-  outline: 2px solid var(--prim-text);
+  outline: 6px solid var(--prim-text);
+}
+
+.comment {
+  opacity: 0.6;
+  font-style: italic;
+}
+
+.fa-solid {
+  font-size: 18px !important;
+}
+
+.df {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+}
+
+.df.space {
+  justify-content: space-between;
 }
 
 /*see lightMode() and darkMode()*/

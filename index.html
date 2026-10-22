@@ -15,101 +15,118 @@
 </head>
 
 <body>
-  <nav class="header">
-    
-    <article>
-      <div>
-        <img src="assets/favicon.png" id="light">
-        <img src="assets/favicon2.png" id="dark">
-        <h2>&nbsp;bluezcreen</h2>
-      </div>
-      
-      <nav style="font-size: 20px;">
-        <div id="tw">
-          <p id="twtext" class="hometext">you probably saw me on twitter</p>
+
+  <div class="banner"></div>
+
+    <nav class="header">
+
+      <nav>
+        <div>
+          <img src="assets/favicon.png" id="light">
+          <img src="assets/favicon2.png" id="dark">
+          <h2>&nbsp;bluezcreen</h2>
         </div>
       </nav>
+
+
+      <!--nav-->
+
+      <nav style="font-size: 20px;">
+        <a href="/" class="hlight">homepage</a>&nbsp;&nbsp;&nbsp;
+        <a href="/socials/">socials</a>&nbsp;&nbsp;&nbsp;
+        <a href="/guestbook/">guestbook</a>&nbsp;&nbsp;&nbsp;
+        <a href="/archive/">archive</a>&nbsp;&nbsp;&nbsp;
+    </nav>
+
+    </nav>
+
+    <article class="box" style="margin: 16px 0 16px 0;">
+      <div id="tw">
+          <p id="twtext" class="hometext comment">you probably saw me on twitter</p>
+        </div>
     </article>
 
-    <!--<div style="font-size: 18px">
-      <a href="https://x.com/bluezcreen_"><i class="fa-brands fa-twitter"></i></a>&nbsp;
-      <a href="https://m.youtube.com/channel/UCLZkiAjM041QTJiqf9Q_Vmw"><i class="fa-brands fa-youtube"></i></a>&nbsp;
-      <a href="https://discord.com/users/764432072261107763"><i class="fa-brands fa-discord"></i></a>&nbsp;
-      <a href="https://github.com/bluezcreenxd"><i class="fa-brands fa-github"></i></a>
-    </div>-->
-    
-  </nav>
+    <div class="grid">
+      
+      <article class="box">
+        <h3 class="hlight">about</h3>
+        <br><br>
 
-  <article class="box">
-    <a href="/">homepage</a>&nbsp;&nbsp;&nbsp;
-    <a href="/socials/">socials</a>&nbsp;&nbsp;&nbsp;
-    <a href="/guestbook/">guestbook</a>&nbsp;&nbsp;&nbsp;
-    <a href="/archive/">archive</a>&nbsp;&nbsp;&nbsp;
-  </article>
-  
-  <div class="box">
-    <article>
-    <div id="bio">
-    <img src="assets/profile2.jpg" style="width: 85px; flex-shrink: 0">
-    <div><br><br>he/him, 16, @SE Asia, INFP<br>interested in webdev & tech</div>
+        <div>
+          <i class="fa-solid fa-user"></i> - he/him<br>
+          <i class="fa-solid fa-calendar"></i> - 17<br>
+          <i class="fa-solid fa-puzzle-piece"></i> - INFP<br>
+          <i class="fa-solid fa-globe"></i> - Southeast Asia<br><br>
+          <span class="comment">interested in webdev and tech</span>
+        </div>
+      </article>
+
+      <article class="box">
+          <h3 class="hlight">on replay</h3>
+          <br><br>
+
+          <a href="https://www.youtube.com/watch?v=jcYvDZKLQJ0">
+          <div class="df">
+            <img src="assets/album.jpg" style="width: 55px; flex-shrink: 0">
+            <div>
+              <h3>Me and the Birds</h3><br>
+              <span>Duster</span>
+            </div>
+          </div>
+          </a>
+          <br><br>
+
+          <span class="comment">
+              nicotine if it was a song
+          </span>
+
+      </article>
+
     </div>
-    
-    <hr>
-    
-    <div>
-      i'm known online under the username 'bluezcreen'. it's literally in the domain name<br><br>
-      chronically online tech enthusiast living in Indonesia<!--<br>currently surviving off dimes because of inflation--><br><br>
-      sorry for the barebones site i'm trying to think about what else i should add
+
+    <div class="grid">
+
+      <div class="box">
+        <h3 class="hlight">device</h3>
+        <br><br>
+
+        <div>
+          <i class="fa-solid fa-laptop"></i> - Lenovo Thinkpad L390, i5-8265U<br>
+          <i class="fa-solid fa-gears"></i> - Fedora Linux 44 (KDE), Niri + Noctalia<br>
+          <i class="fa-solid fa-code-merge"></i> - VSCodium
+        </div>
+      </div>
+
+      <article class="box">
+          <h3 class="hlight">media</h3>
+          <br><br>
+          <div> 
+            <i class="fa-solid fa-tv"></i> - Whiplash (2014)<br>
+            <i class="fa-solid fa-gamepad"></i> -Opus Magnum (2017) <a href="https://store.steampowered.com/app/558990/Opus_Magnum/"><u>(Steam)</u></a>
+          </div>
+      </article>
+
+
     </div>
-    </article>
 
-    <hr>
 
-    <article id="bio">
+    
+    <article class="footer df space">
       <div>
-      <b>software:</b> <br>
-      &nbsp;&nbsp;&nbsp;&nbsp;vscodium<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;fedora linux 44<br><br>
-     </div>
-        
-      <div>
-      <b>i do:</b><br>
-      &nbsp;&nbsp;&nbsp;&nbsp;HTML, CSS<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;JavaScript (not yet)<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;Python (a bit)
-     </div>
+        <span style="font-family: var(--title-font); font-size: 1.8rem;">bluezcreen.site</span>&nbsp;&nbsp;
+        <span style="font-family: var(--body-font); font-size: 1rem;">you've wasted <span id="timer">0m 0s</span> being here</span>
+      </div>
+
+      <div style="font-size: 18px">
+        <a onclick="darkMode()"><i class="fa-solid fa-moon"></i></a>&nbsp;
+        <a onclick="lightMode()"><i class="fa-solid fa-sun"></i></a>&nbsp;&nbsp;
+        |&nbsp;&nbsp;
+        <a href="https://x.com/bluezcreen_"><i class="fa-brands fa-twitter"></i></a>&nbsp;
+        <a href="https://m.youtube.com/channel/UCLZkiAjM041QTJiqf9Q_Vmw"><i class="fa-brands fa-youtube"></i></a>&nbsp;
+        <a href="https://discord.com/users/764432072261107763"><i class="fa-brands fa-discord"></i></a>&nbsp;
+        <a href="https://github.com/bluezcreenxd"><i class="fa-brands fa-github"></i></a>
+      </div>
     </article>
-  </div>
-
-  <div class="box" style="font-size: 20px">
-      <a onclick="darkMode()"><i class="fa-solid fa-moon"></i></a>&nbsp;&nbsp;
-      <a onclick="lightMode()"><i class="fa-solid fa-sun"></i></a>
-    </div>
-  
-  <!--<text-box title="cat checklist.txt">
-    [ ] actually add other pages<br>
-    [ ] a more customizable themer with fonts and accent colors<br>
-    [ ] make it less soulless somehow<br>
-    [ ] idea: a page that runs stupid scripts i made while learning python
-  </text-box>-->
-  
-  
-  
-  <div class="haiku">
-    <pre>
- -----------------------------
-/ I don't like haikus         \
-| The structure is too rigid  |
-\ They don't even rhyme       /
- -----------------------------
-        \   ^__^
-         \  (oo)\_______
-            (__)\       )\/\
-                ||----w |
-                ||     ||
-    </pre>
-    <foot-er></foot-er>
-
-  <script src="elements.js" defer></script>
-  <script src="themer.js" defer></script>
+    <script src="elements.js"defer></script>
+    <script src="themer.js"defer></script>
 </body>
